@@ -1,0 +1,13 @@
+# Learing Godot Progject: Get Out!
+
+* 2D controllable sprite (WASD = NWSE), top-down view
+  * Add NE, NW, SE, SW when 2 keys are pressed
+
+* Add a slower moving NPC that tries to catch you. You must reach the EXIT before being caught.
+  * Add a score that increments each EXIT is reached. Lose the game if caught.
+  * When facing the NPC, it stops (think Mario and ghosts), with a short delay before resuming the chase.
+  * Each iteration (after EXITing), the NPC speeds up.
+
+* Add a UI (Start, Exit, Help, Credits)
+
+* Add sounds and background music
