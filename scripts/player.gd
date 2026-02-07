@@ -4,11 +4,13 @@ var speed = 200
 var screen_size
 
 func _ready():
-	position.x = 300
+	position.x = 600
 	position.y = 300
 	screen_size = get_viewport_rect().size
 
 func _physics_process(delta):
+	
+	velocity = Vector2.ZERO
 	
 	if Input.is_action_pressed("ui_left"):
 		velocity = Vector2.LEFT

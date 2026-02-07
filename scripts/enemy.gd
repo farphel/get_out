@@ -5,8 +5,8 @@ var screen_size
 var player = null
 
 func _ready():
-	position.x = 800
-	position.y = 400
+	position.x = 200
+	position.y = 500
 	screen_size = get_viewport_rect().size
 	player = get_parent().get_node("Player")
 
@@ -25,3 +25,4 @@ func check_for_player_collision():
 		if collider.name == "Player":
 			print("Caught!!")
 			#get_tree().reload_current_scene() # restart the game
+			get_parent().trigger_game_over()

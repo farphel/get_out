@@ -27,6 +27,19 @@ size = Vector2(125.97938, 125.97938)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_272bh"]
 radius = 11.782799
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+bg_color = Color(0.51901037, 0.2753131, 0.18870854, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+shadow_size = 2
+shadow_offset = Vector2(0.5, 0.5)
+
 [node name="Main" type="Node2D" unique_id=2073040118]
 script = ExtResource("1_lquwl")
 
@@ -118,4 +131,48 @@ texture = ExtResource("3_lquwl")
 scale = Vector2(1.6973896, 1.6973896)
 shape = SubResource("CapsuleShape2D_272bh")
 
+[node name="UI" type="CanvasLayer" parent="." unique_id=449926801]
+
+[node name="CaughtScreen" type="Control" parent="UI" unique_id=538542996]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI/CaughtScreen" unique_id=1200297558]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 188.0
+offset_right = 529.0
+offset_bottom = 228.0
+scale = Vector2(6.09447, 6.09447)
+color = Color(0.16565639, 0.16565639, 0.16565648, 0.6745098)
+
+[node name="Label" type="Label" parent="UI/CaughtScreen" unique_id=1230501885]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 256.00003
+offset_right = 669.0
+offset_bottom = 301.00003
+scale = Vector2(1.1527008, 1.1527008)
+theme_override_font_sizes/font_size = 32
+text = "Caught!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="UI/CaughtScreen" unique_id=113305421]
+layout_mode = 0
+offset_left = 572.0
+offset_top = 358.0
+offset_right = 653.0
+offset_bottom = 389.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lquwl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lquwl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lquwl")
+text = "Try Again"
+
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
+[connection signal="pressed" from="UI/CaughtScreen/Button" to="." method="_on_button_pressed"]
