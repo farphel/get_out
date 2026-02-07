@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bctpkjvddp83u"]
+
+[ext_resource type="PackedScene" uid="uid://bm81v0iaytmfh" path="res://player.tscn" id="1_t5nqf"]
+[ext_resource type="PackedScene" uid="uid://brdju6mgoyab4" path="res://chaser.tscn" id="2_87n3r"]
+
+[node name="GameField" type="Area2D" unique_id=446726356]
+
+[node name="Player" parent="." unique_id=94628679 instance=ExtResource("1_t5nqf")]
+
+[node name="Chaser" parent="." unique_id=1547473754 instance=ExtResource("2_87n3r")]
