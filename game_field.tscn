@@ -8,3 +8,6 @@
 [node name="Player" parent="." unique_id=94628679 instance=ExtResource("1_t5nqf")]
 
 [node name="Chaser" parent="." unique_id=1547473754 instance=ExtResource("2_87n3r")]
+
+[node name="Walls" type="Polygon2D" parent="." unique_id=898547744]
+polygon = PackedVector2Array(-11, 547, 23, 547, 23, 25, 1126, 25, 1126, 619, -13, 619, -13, 658, 1167, 658, 1167, -12, -13, -12)

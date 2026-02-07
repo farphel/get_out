@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 200
+var speed = 250
 var screen_size
 var player = null
 
