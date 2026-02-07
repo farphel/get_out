@@ -13,7 +13,11 @@ config_version=5
 config/name="Get Out!"
 run/main_scene="uid://bm81v0iaytmfh"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://art/icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [editor]
 
