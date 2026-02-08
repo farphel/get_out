@@ -3,30 +3,32 @@
 Create a simple 2D game where the Player tries to reach an Exit (gap in
 the surrounding walls) before being caught by an Enemy.
 
+> Best viewed with `glow README`
+
 ## Task 001: controllable player
-- 2D controllable sprite (WASD = NWSE), top-down view
-  - Add NE, NW, SE, SW when 2 keys are pressed
+- [x] 2D controllable sprite (WASD = NWSE), top-down view
+  - [x] Add NE, NW, SE, SW when 2 keys are pressed
 
 ## Task 002: add game arena border with Exit
-- Add a surrounding border with a gap for an "Exit". Add a collision object for
-  the gap and if player touches the Exit, they win.
+- [x] Add a surrounding border with a gap for an "Exit". Add a collision object
+  for the gap and if player touches the Exit, they win.
 
 ## Task 003: add hostile npc to chase player
-- Add a slower moving NPC that chases the player. Player must reach the EXIT
+- [x] Add a slower moving NPC that chases the player. Player must reach the EXIT
   before being caught.
-  * Add a score that increments each EXIT is reached. Lose the game if caught.
-  * When facing the NPC, it stops (think Mario and ghosts), with a short delay
-    before resuming the chase.
-  * Each iteration (after EXITing), the NPC speeds up.
+  - [ ] Add a score that increments each EXIT is reached. Lose the game if caught.
+  - [ ] When facing the NPC, it stops (think Mario and ghosts), with a short delay
+        before resuming the chase.
+  - [ ] Each iteration (after EXITing), the NPC speeds up.
 
 ## Task 004: add game UI
-* Add a UI (Start, Exit, Help, Credits)
+- [ ] Add a UI (Start, Exit, Help, Credits)
 
 ## Task 005: add sound effects
-* Add sounds and background music
+- [ ] Add sounds and background music
 
 ## Task 006: Improvements
-- Change Player, Enemy, and Wall into distinct scenes (vs Main scene only)
-* Change Enemey from CharacterBody2D to NavigationAgent2D 
-* Node communication via signals vs references (remove get_parent(), etc)
+- [x] Change Player, Enemy, and Wall into distinct scenes (vs Main scene only)
+- [ ] Change Enemey from `CharacterBody2D` to `NavigationAgent2D` 
+- [ ] Node communication via signals vs references (remove get_parent(), etc)
 
