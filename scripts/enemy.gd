@@ -25,4 +25,3 @@ func check_for_player_collision():
 		if collider.name == "Player":
 			print("Caught!!")
 			#get_tree().reload_current_scene() # restart the game
-			get_parent().trigger_game_over()
