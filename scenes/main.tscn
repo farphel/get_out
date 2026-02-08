@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dnq0xn578aufp"]
+
+[ext_resource type="Script" uid="uid://dnl3b8wb8c4n6" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cgw0ign1rg1mi" path="res://scenes/mob.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cdbsmgsj33xdy" path="res://scenes/player.tscn" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dt1dtgnkcapol" path="res://scenes/wall.tscn" id="4_jyhfs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(33, 76.35712)
+
+[node name="Main" type="Node2D" unique_id=2073040118]
+script = ExtResource("1_sugp2")
+
+[node name="WallDown" parent="." unique_id=1888386746 instance=ExtResource("4_jyhfs")]
+position = Vector2(-17, 633)
+scale = Vector2(29.441177, 0.8333333)
+collision_layer = 2
+collision_mask = 0
+
+[node name="WallUp" parent="." unique_id=1132149017 instance=ExtResource("4_jyhfs")]
+position = Vector2(-11, -14)
+scale = Vector2(29.428572, 0.75)
+collision_layer = 2
+collision_mask = 0
+
+[node name="WallRight" parent="." unique_id=1030876199 instance=ExtResource("4_jyhfs")]
+position = Vector2(1132, -11)
+scale = Vector2(1.3181819, 16.970589)
+collision_layer = 2
+collision_mask = 0
+
+[node name="WallLeft" parent="." unique_id=312600439 instance=ExtResource("4_jyhfs")]
+position = Vector2(-22, -7)
+scale = Vector2(1, 14.026316)
+collision_layer = 2
+collision_mask = 0
+
+[node name="Exit" type="Area2D" parent="." unique_id=1474929097]
+position = Vector2(-20, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=1778383528]
+position = Vector2(-7, 586.89514)
+rotation = 3.1415927
+scale = Vector2(1, 1.1290323)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Mob" parent="." unique_id=1069518152 instance=ExtResource("2_sugp2")]
+collision_layer = 4
+collision_mask = 3
+
+[node name="Player" parent="." unique_id=1752920092 instance=ExtResource("3_jyhfs")]
+collision_mask = 6
+
+[connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]

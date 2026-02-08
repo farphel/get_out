@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cgw0ign1rg1mi"]
+
+[ext_resource type="Texture2D" uid="uid://d367rmrn5jaha" path="res://art/monster-icon.svg" id="1_4are2"]
+[ext_resource type="Script" uid="uid://6s62twv5ugq" path="res://scripts/mob.gd" id="1_bsing"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bsing"]
+radius = 29.0
+height = 72.0
+
+[node name="Mob" type="CharacterBody2D" unique_id=1069518152]
+script = ExtResource("1_bsing")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=873589836]
+scale = Vector2(0.54559964, 0.54559964)
+texture = ExtResource("1_4are2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=518931000]
+shape = SubResource("CapsuleShape2D_bsing")

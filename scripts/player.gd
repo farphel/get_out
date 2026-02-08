@@ -10,7 +10,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")	
+	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	position += velocity * speed * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
 

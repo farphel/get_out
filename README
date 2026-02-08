@@ -24,3 +24,9 @@ the surrounding walls) before being caught by an Enemy.
 
 ## Task 005: add sound effects
 * Add sounds and background music
+
+## Task 006: Improvements
+- Change Player, Enemy, and Wall into distinct scenes (vs Main scene only)
+* Change Enemey from CharacterBody2D to NavigationAgent2D 
+* Node communication via signals vs references (remove get_parent(), etc)
+
