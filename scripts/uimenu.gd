@@ -7,6 +7,9 @@ signal start_pressed
 @onready var start_button = $VBoxContainer/HBoxContainer/StartButton
 @onready var quit_button = $VBoxContainer/HBoxContainer/QuitButton
 
+func _ready():
+	start_button.grab_focus()
+	
 func show_start_screen():
 	show()
 	title_label.text = "Get Out!"
@@ -24,11 +27,18 @@ func show_results_screen():
 	quit_button.text = "Give Up"
 	get_tree().paused = true
 
-func _on_start_button_pressed():
+func _on_start_button_pressed() -> void:
 	GameManager.number_of_attempts += 1
 	hide()
 	get_tree().paused = false
 	start_pressed.emit()
 
-func _on_quit_button_pressed():
+func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		if !self.visible:
+			show_results_screen()
+		else:
+			get_tree().quit()

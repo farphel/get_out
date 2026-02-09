@@ -59,7 +59,9 @@ collision_mask = 3
 [node name="Player" parent="." unique_id=1752920092 instance=ExtResource("3_jyhfs")]
 collision_mask = 6
 
-[node name="Uimenu" parent="." unique_id=666418655 instance=ExtResource("5_tbgi4")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1055189019]
+
+[node name="Uimenu" parent="CanvasLayer" unique_id=666418655 instance=ExtResource("5_tbgi4")]
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
