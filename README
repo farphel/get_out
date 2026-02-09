@@ -13,6 +13,12 @@ the surrounding walls) before being caught by an Enemy.
 - [x] Add a surrounding border with a gap for an "Exit". Add a collision object
   for the gap and if player touches the Exit, they win.
 
+### NOTE: Collision layers
+* Player: Layer 1, Mask 2(Walls), 3(Enemy)
+* Walls:  Layer 2, Mask None(Walls usually don't "look" for things)
+* Enemy:  Layer 3, Mask 1(Player), 2(Walls)
+* Exit:   Layer None, Mask 1(Only looking for Player)
+
 ## Task 003: add hostile npc to chase player
 - [x] Add a slower moving NPC that chases the player. Player must reach the EXIT
   before being caught.

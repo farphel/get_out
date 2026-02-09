@@ -35,6 +35,12 @@ scale = Vector2(1, 14.026316)
 collision_layer = 2
 collision_mask = 0
 
+[node name="Obstacle" parent="." unique_id=937708986 instance=ExtResource("4_jyhfs")]
+position = Vector2(480, 230)
+scale = Vector2(1.3728029, 4.3165007)
+collision_layer = 2
+collision_mask = 0
+
 [node name="Exit" type="Area2D" parent="." unique_id=1474929097]
 position = Vector2(-20, 0)
 collision_layer = 0
