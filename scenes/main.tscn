@@ -6,38 +6,38 @@
 [ext_resource type="PackedScene" uid="uid://dt1dtgnkcapol" path="res://scenes/wall.tscn" id="4_jyhfs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
-size = Vector2(33, 76.35712)
+size = Vector2(33, 81.57855)
 
 [node name="Main" type="Node2D" unique_id=2073040118]
 script = ExtResource("1_sugp2")
 
 [node name="WallDown" parent="." unique_id=1888386746 instance=ExtResource("4_jyhfs")]
-position = Vector2(-17, 633)
-scale = Vector2(29.441177, 0.8333333)
+position = Vector2(-49, 629)
+scale = Vector2(6.0960984, 0.89285713)
 collision_layer = 2
 collision_mask = 0
 
 [node name="WallUp" parent="." unique_id=1132149017 instance=ExtResource("4_jyhfs")]
 position = Vector2(-11, -14)
-scale = Vector2(29.428572, 0.75)
+scale = Vector2(5.903516, 0.7875)
 collision_layer = 2
 collision_mask = 0
 
 [node name="WallRight" parent="." unique_id=1030876199 instance=ExtResource("4_jyhfs")]
 position = Vector2(1132, -11)
-scale = Vector2(1.3181819, 16.970589)
+scale = Vector2(0.19938886, 16.835688)
 collision_layer = 2
 collision_mask = 0
 
 [node name="WallLeft" parent="." unique_id=312600439 instance=ExtResource("4_jyhfs")]
-position = Vector2(-22, -7)
-scale = Vector2(1, 14.026316)
+position = Vector2(-49, -14)
+scale = Vector2(0.35093114, 14.026316)
 collision_layer = 2
 collision_mask = 0
 
 [node name="Obstacle" parent="." unique_id=937708986 instance=ExtResource("4_jyhfs")]
 position = Vector2(480, 230)
-scale = Vector2(1.3728029, 4.3165007)
+scale = Vector2(0.29933295, 5.275723)
 collision_layer = 2
 collision_mask = 0
 
@@ -46,8 +46,8 @@ position = Vector2(-20, 0)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=1778383528]
-position = Vector2(-7, 586.89514)
-rotation = 3.1415927
+position = Vector2(-13, 590)
+rotation = -3.1415925
 scale = Vector2(1, 1.1290323)
 shape = SubResource("RectangleShape2D_1bvp3")
 
