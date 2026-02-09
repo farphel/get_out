@@ -23,8 +23,8 @@ the surrounding walls) before being caught by an Enemy.
 - [x] Add a slower moving NPC that chases the player. Player must reach the EXIT
   before being caught.
   - [ ] Add a score that increments each EXIT is reached. Lose the game if caught.
-  - [ ] When facing the NPC, it stops (think Mario and ghosts), with a short delay
-        before resuming the chase.
+  - [x] When facing the NPC, it stops (think Mario and ghosts), with a short delay
+        before resuming the chase. The Enemy also changes color to blue.
   - [ ] Each iteration (after EXITing), the NPC speeds up.
 
 ## Task 004: add game UI

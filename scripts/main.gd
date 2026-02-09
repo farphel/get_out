@@ -11,7 +11,6 @@ func _process(_delta):
 func _on_exit_body_entered(body):
 	if body.name == "Player":
 		print("You escaped!!")
-		#get_tree().call_deferred("reload_current_scene")
 		win_game()
 
 func win_game():
