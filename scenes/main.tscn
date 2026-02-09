@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cgw0ign1rg1mi" path="res://scenes/mob.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cdbsmgsj33xdy" path="res://scenes/player.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dt1dtgnkcapol" path="res://scenes/wall.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://c5k8f6tm6ey1j" path="res://scenes/uimenu.tscn" id="5_tbgi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(33, 81.57855)
@@ -57,5 +58,9 @@ collision_mask = 3
 
 [node name="Player" parent="." unique_id=1752920092 instance=ExtResource("3_jyhfs")]
 collision_mask = 6
+
+[node name="Uimenu" parent="." unique_id=666418655 instance=ExtResource("5_tbgi4")]
+size_flags_horizontal = 6
+size_flags_vertical = 6
 
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
