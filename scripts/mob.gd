@@ -48,15 +48,9 @@ func _physics_process(delta):
 	## END: Mob always chases Player
 	
 	move_and_slide()
-	check_for_player_collision()
 
-func check_for_player_collision():
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		var collider = collision.get_collider()
-		if collider.name == "Player":
-			print("Caught!!")
-			lose_game()
-
-func lose_game():
-	pass
+func _on_hurtbox_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		print("Caught! - print via mob.gd")
+		if get_parent().has_method("restart_game"):
+			get_parent().restart_game()
