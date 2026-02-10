@@ -14,6 +14,7 @@ var frozen_color = Color(0,2,7)
 func _ready():
 	position.x = 200
 	position.y = 500
+	sprite.modulate = sprite.modulate.lerp(chase_color, 0.1)
 
 func _physics_process(delta):
 	
@@ -35,10 +36,10 @@ func _physics_process(delta):
 		velocity = velocity.lerp(target_velocity, deceleration * delta)
 		sprite.modulate = sprite.modulate.lerp(frozen_color, 0.1)
 	else:
-			# Player is moving away/sideways -> Mob Chase!
-			target_velocity = dir_to_player * speed
-			velocity = velocity.lerp(target_velocity, acceleration * delta)
-			sprite.modulate = sprite.modulate.lerp(chase_color, 0.1)
+		# Player is moving away/sideways -> Mob Chase!
+		target_velocity = dir_to_player * speed
+		velocity = velocity.lerp(target_velocity, acceleration * delta)
+		sprite.modulate = sprite.modulate.lerp(chase_color, 0.1)
 	## END: Mob halts when Player faces them
 
 	## BEGIN: Mob always chases Player
@@ -55,4 +56,7 @@ func check_for_player_collision():
 		var collider = collision.get_collider()
 		if collider.name == "Player":
 			print("Caught!!")
-			get_tree().reload_current_scene() # restart the game
+			lose_game()
+
+func lose_game():
+	pass

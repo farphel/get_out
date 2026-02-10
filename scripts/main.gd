@@ -1,19 +1,20 @@
 extends Node2D
 
-@onready var ui = $CanvasLayer/UImenu
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	ui.show_start_screen()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
 
 func _on_exit_body_entered(body):
-	if body.is_in_group("player"):
-		GameManager.escapes += 1
-		ui.show_results_screen()
+	if body.name == "Player":
+		print("You escaped!")
+		win_game()
 
-func _on_player_hit():
-	ui.show_results_screen()
+func win_game():
+	get_tree().paused = true
+	await get_tree().create_timer(2.0).timeout
+	get_tree().paused = false
+	get_tree().reload_current_scene()

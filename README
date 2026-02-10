@@ -1,4 +1,4 @@
-# Learing Godot Progject: Get Out!
+# Learing Godot Project: Get Out!
 
 Create a simple 2D game where the Player tries to reach an Exit (gap in
 the surrounding walls) before being caught by an Enemy.
@@ -14,27 +14,27 @@ the surrounding walls) before being caught by an Enemy.
   for the gap and if player touches the Exit, they win.
 
 ### NOTE: Collision layers
-* Player: Layer 1, Mask 2(Walls), 3(Enemy)
-* Walls:  Layer 2, Mask None(Walls usually don't "look" for things)
-* Enemy:  Layer 3, Mask 1(Player), 2(Walls)
-* Exit:   Layer None, Mask 1(Only looking for Player)
+    * Player: Layer 1, Mask 2(Walls), 3(Enemy)
+    * Walls:  Layer 2, Mask None(Walls usually don't "look" for things)
+    * Enemy:  Layer 3, Mask 1(Player), 2(Walls)
+    * Exit:   Layer None, Mask 1(Only looking for Player)
 
 ## Task 003: add hostile npc to chase player
 - [x] Add a slower moving NPC that chases the player. Player must reach the EXIT
   before being caught.
-  - [ ] Add a score that increments each EXIT is reached. Lose the game if caught.
   - [x] When facing the NPC, it stops (think Mario and ghosts), with a short delay
         before resuming the chase. The Enemy also changes color to blue.
   - [ ] Each iteration (after EXITing), the NPC speeds up.
 
 ## Task 004: add game UI
 - [ ] Add a UI (Start, Exit, Help, Credits)
+  - [ ] Add a score that increments each EXIT is reached. Lose the game if caught.
 
 ## Task 005: add sound effects
 - [ ] Add sounds and background music
 
 ## Task 006: Improvements
 - [x] Change Player, Enemy, and Wall into distinct scenes (vs Main scene only)
-- [ ] Change Enemey from `CharacterBody2D` to `NavigationAgent2D` 
-- [ ] Node communication via signals vs references (remove get_parent(), etc)
+- [ ] (maybe?) Change Enemey from `CharacterBody2D` to `NavigationAgent2D` 
+- [x] Node communication via signals vs references (remove get_parent(), etc)
 
