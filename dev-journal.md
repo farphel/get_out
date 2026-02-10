@@ -11,18 +11,18 @@ things i've learned while making this small 2d godot game.
   additional `Area2D` node (with child of `CollisionBody2D`) for
   game mechanics (a "sensor" for catching the player or a "hurtbox"
   to know when to take damage).
-<br/>
+
   * `CharacterBody2D` (root node of Mob)
     * `Sprite2D` (for image)
     * `CollisionBody2D` (for "solid" box for wall obstruction)
     * `Area2D` (the "sensor" box)
       * `CollisionBody2D` (the "detection" box when catching player)
-<br/>
+
   * sizing of the two `CollisionBody2D` nodes: the `Area2D` sensor
     should be slightly *smaller* than the `CharacterBody2D` node. this
     is more accommodating for a minor brush with the mob, but also
     allows the mob to slightly pass into the walls.
-<br/>
+
 * layers and masks: restrict how game objects interact with each other
   via layers/masks. for example, the `walls` can be on layer 1 with
   no mask (layer 1 is where the walls live and the mask is what they
