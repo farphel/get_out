@@ -11,9 +11,12 @@ func _process(_delta):
 func _on_exit_body_entered(body):
 	if body.name == "Player":
 		print("You escaped!")
+		GameManager.escapes += 1
 		restart_game()
 
 func restart_game():
+	GameManager.number_of_attempts += 1
+	print(GameManager.get_stats_text())
 	get_tree().paused = true
 	await get_tree().create_timer(2.0).timeout
 	get_tree().paused = false
