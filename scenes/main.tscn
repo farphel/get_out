@@ -61,8 +61,9 @@ collision_mask = 6
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1055189019]
 
-[node name="Uimenu" parent="CanvasLayer" unique_id=666418655 instance=ExtResource("5_tbgi4")]
+[node name="UImenu" parent="CanvasLayer" unique_id=666418655 instance=ExtResource("5_tbgi4")]
 size_flags_horizontal = 6
 size_flags_vertical = 6
+mouse_filter = 1
 
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]

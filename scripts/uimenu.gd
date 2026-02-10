@@ -16,6 +16,7 @@ func show_start_screen():
 	score_label.hide()
 	start_button.text = "Start"
 	quit_button.text = "Quit"
+	start_button.grab_focus()
 	get_tree().paused = true
 
 func show_results_screen():
@@ -25,15 +26,18 @@ func show_results_screen():
 	score_label.show()
 	start_button.text = "Go Again"
 	quit_button.text = "Give Up"
+	start_button.grab_focus()
 	get_tree().paused = true
 
 func _on_start_button_pressed() -> void:
+	#print("Start button pressed")
 	GameManager.number_of_attempts += 1
 	hide()
 	get_tree().paused = false
 	start_pressed.emit()
 
 func _on_quit_button_pressed() -> void:
+	#print("Quit button pressed")
 	get_tree().quit()
 
 func _unhandled_input(event: InputEvent) -> void:
