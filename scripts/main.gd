@@ -13,7 +13,7 @@ func _process(_delta):
 
 func _on_exit_body_entered(body):
 	if body.name == "Player":
-		print("You escaped!")
+		#print("You escaped!")
 		GameManager.escapes += 1
 		restart_game()
 
@@ -22,11 +22,11 @@ func _on_mob_player_caught():
 
 func restart_game():
 	ui.show_results_screen()
-	print("stats: " + GameManager.get_stats_text())
+	#print("stats: " + GameManager.get_stats_text())
 	get_tree().paused = true
 
 func _on_uimenu_start_pressed():
-	print("in main via uimenu signal start_pressed")
+	#print("in main via uimenu signal start_pressed")
 	ui.hide()
 	get_tree().paused = false
 	GameManager.number_of_attempts += 1

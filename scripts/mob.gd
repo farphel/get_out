@@ -53,7 +53,7 @@ func _physics_process(delta):
 
 func _on_hurtbox_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		print("Caught!")
+		#print("Caught!")
 		player_caught.emit()                          ## <- good practice
 		#if get_parent().has_method("restart_game"):  ## <- bad practice
 			# The "Godot way" is "Method Down, Signal Up", it's OK for Main

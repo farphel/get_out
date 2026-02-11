@@ -19,7 +19,7 @@ func show_start_screen():
 
 func show_results_screen():
 	self.show()
-	title_label.text = "~~ GET OUT!! ~~"
+	title_label.text = "Get Out!"
 	score_label.text = "Score: " + GameManager.get_stats_text()
 	score_label.show()
 	start_button.text = "Go Again"
@@ -33,5 +33,5 @@ func _on_start_button_pressed() -> void:
 	start_pressed.emit()
 
 func _on_quit_button_pressed() -> void:
-	print("Quit button pressed")
+	#print("Quit button pressed")
 	get_tree().quit(0)
