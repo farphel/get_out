@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cgw0ign1rg1mi" path="res://scenes/mob.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cdbsmgsj33xdy" path="res://scenes/player.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dt1dtgnkcapol" path="res://scenes/wall.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://c5k8f6tm6ey1j" path="res://scenes/uimenu.tscn" id="5_tbgi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(33, 81.57855)
@@ -54,6 +55,11 @@ collision_layer = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1055189019]
 
+[node name="Uimenu" parent="CanvasLayer" unique_id=666418655 instance=ExtResource("5_tbgi4")]
+visible = false
+
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
+[connection signal="player_caught" from="Mob" to="." method="_on_mob_player_caught"]
+[connection signal="start_pressed" from="CanvasLayer/Uimenu" to="." method="_on_uimenu_start_pressed"]
 
 [editable path="Mob"]

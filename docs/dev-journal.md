@@ -2,6 +2,18 @@
 
 things i've learned while making this small 2d godot game.
 
+### 20260211
+
+* Method Down, Signal Up: this describes the "Godot way" of structuring
+  communication between nodes. My "Main" Node2D node, can get a reference
+  to a child and in turn call one of its methods (Method Down). For example,
+  ```
+  var Player = $Player
+  $Player.some_function()
+  ```
+  But a child node should not call a higher-level node's methods, but should
+  instead emit signals (Signal Up).
+
 ### 20260210
 
 * mob scene: mob and player consist of a `CharacterBody2D` root node,
@@ -13,15 +25,15 @@ things i've learned while making this small 2d godot game.
   to know when to take damage).
 
   * `CharacterBody2D` (root node of Mob)
-    * `Sprite2D` (for image)
-    * `CollisionBody2D` (for "solid" box for wall obstruction)
-    * `Area2D` (the "sensor" box)
-      * `CollisionBody2D` (the "detection" box when catching player)
+	* `Sprite2D` (for image)
+	* `CollisionBody2D` (for "solid" box for wall obstruction)
+	* `Area2D` (the "sensor" box)
+	  * `CollisionBody2D` (the "detection" box when catching player)
 
   * sizing of the two `CollisionBody2D` nodes: the `Area2D` sensor
-    should be slightly *smaller* than the `CharacterBody2D` node. this
-    is more accommodating for a minor brush with the mob, but also
-    allows the mob to slightly pass into the walls.
+	should be slightly *smaller* than the `CharacterBody2D` node. this
+	is more accommodating for a minor brush with the mob, but also
+	allows the mob to slightly pass into the walls.
 
 * layers and masks: restrict how game objects interact with each other
   via layers/masks. for example, the `walls` can be on layer 1 with
@@ -30,4 +42,3 @@ things i've learned while making this small 2d godot game.
   the mob (root) is on layer 3 and mask 1 (walls). the mob's `Area2D`
   node is not on a layer, but uses mask 2 (player) to detect when it
   catches up with the player.
-
