@@ -12,7 +12,9 @@ things i've learned while making this small 2d godot game.
   $Player.some_function()
   ```
   But a child node should not call a higher-level node's methods, but should
-  instead emit signals (Signal Up).
+  instead emit signals (Signal Up). In the UI, a `start_pressed` signal is
+  emitted when the user clicks Start. No signal is needed when the user
+  clicks Quit (we just exit the game).
 
 ### 20260210
 
