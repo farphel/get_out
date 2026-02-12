@@ -37,4 +37,7 @@ the surrounding walls) before being caught by an Enemy.
 - [x] Change Player, Enemy, and Wall into distinct scenes (vs Main scene only)
 - [ ] (maybe?) Change Enemey from `CharacterBody2D` to `NavigationAgent2D` 
 - [x] Node communication via signals vs references (remove get_parent(), etc)
+- [x] Button effects (via https://www.youtube.com/watch?v=cIetsUMtyQc)
+- [ ] When Quit button is selected, Enter should trigger press
+- [ ] Add signals via code vs through the Godot UI
 

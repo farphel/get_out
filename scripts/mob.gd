@@ -1,15 +1,15 @@
 extends CharacterBody2D
 
-@export var speed = 225.0
-@export var acceleration = 2.0
-@export var deceleration = 10.0
-@export var stare_precision = 0.7 # 0.5 (loose), 0.9 (precise)
+@export var speed: float = 225.0
+@export var acceleration: float = 2.0
+@export var deceleration: float = 10.0
+@export var stare_precision: float = 0.7 # 0.5 (loose), 0.9 (precise)
 
-var chase_color = Color(1, 1,1)
-var frozen_color = Color(0,2,7)
+var chase_color: Color = Color(1, 1,1)
+var frozen_color: Color = Color(0,2,7)
 
-@onready var sprite = $Sprite2D
-@onready var player = get_tree().get_first_node_in_group("player")
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var player: CharacterBody2D = get_tree().get_first_node_in_group("player")
 
 signal player_caught
 
