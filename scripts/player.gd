@@ -8,17 +8,6 @@ func _ready():
 	position.x = 600
 	position.y = 300
 
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
-# this is a test of the Vim plugin
 func _physics_process(delta):
 
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

@@ -28,7 +28,7 @@ func show_results_screen():
 	get_tree().paused = true
 
 func _on_start_button_pressed() -> void:
-	print("Start button pressed")
+	#print("Start button pressed")
 	self.hide()
 	get_tree().paused = false
 	start_pressed.emit()
