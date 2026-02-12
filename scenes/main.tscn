@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cdbsmgsj33xdy" path="res://scenes/player.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dt1dtgnkcapol" path="res://scenes/wall.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://c5k8f6tm6ey1j" path="res://scenes/uimenu.tscn" id="5_tbgi4"]
+[ext_resource type="AudioStream" uid="uid://b5vgylfaejony" path="res://sounds/DavidKBD - HexaPuppies Pack - 10 - New Horizons - 2.ogg" id="6_tefeu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(33, 81.57855)
@@ -57,6 +58,17 @@ collision_layer = 2
 
 [node name="Uimenu" parent="CanvasLayer" unique_id=666418655 instance=ExtResource("5_tbgi4")]
 visible = false
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=268881978]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 1
+stream = ExtResource("6_tefeu")
+volume_db = -16.0
+autoplay = true
+playback_type = 1
+parameters/looping = true
 
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
 [connection signal="player_caught" from="Mob" to="." method="_on_mob_player_caught"]

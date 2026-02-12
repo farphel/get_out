@@ -1,11 +1,13 @@
 extends Node2D
 
 @onready var ui = $CanvasLayer/Uimenu
+@onready var music = $Music
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if GameManager.number_of_attempts == 0:
 		ui.show_start_screen()
+		$Music.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
