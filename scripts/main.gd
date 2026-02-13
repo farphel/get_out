@@ -1,13 +1,13 @@
 extends Node2D
 
 @onready var ui = $CanvasLayer/Uimenu
-@onready var music = $Music
+@onready var exit_sound = $ExitSound
+@onready var caught_sound = $CaughtSound
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if GameManager.number_of_attempts == 0:
 		ui.show_start_screen()
-		$Music.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -16,10 +16,12 @@ func _process(_delta):
 func _on_exit_body_entered(body):
 	if body.name == "Player":
 		#print("You escaped!")
+		exit_sound.play()
 		GameManager.escapes += 1
 		restart_game()
 
 func _on_mob_player_caught():
+	caught_sound.play()
 	restart_game()
 
 func restart_game():

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://mx7sgaefo52m"]
+
+[ext_resource type="AudioStream" uid="uid://b5vgylfaejony" path="res://sounds/DavidKBD - HexaPuppies Pack - 10 - New Horizons - 2.ogg" id="1_nbeep"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1860722373]
+process_mode = 3
+stream = ExtResource("1_nbeep")
+volume_db = -32.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true

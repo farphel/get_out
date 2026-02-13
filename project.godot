@@ -22,6 +22,7 @@ buses/default_bus_layout=""
 [autoload]
 
 GameManager="*uid://tl530t6os677"
+GlobalAudioStreamPlayer="*uid://mx7sgaefo52m"
 
 [display]
 
