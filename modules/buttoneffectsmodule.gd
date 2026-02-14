@@ -12,6 +12,7 @@ class_name ButtonEffectsModule
 @export var rotation_amount: float = 3.0
 
 @onready var button: Button = get_parent()
+@onready var mouseover_sound: AudioStreamPlayer = $AudioStreamPlayer
 
 var tween: Tween
 
@@ -30,6 +31,7 @@ func _on_button_pressed() -> void:
 
 	
 func _on_mouse_hovered(hovered: bool) -> void:
+	$AudioStreamPlayer.play()
 	reset_tween()
 	tween.tween_property(button, "scale",
 		scale_amount if hovered else Vector2.ONE, anim_duration)

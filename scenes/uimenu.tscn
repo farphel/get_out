@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c7wwsevmyy7hx" path="res://scripts/uimenu.gd" id="1_j8spw"]
 [ext_resource type="FontFile" uid="uid://d4ary8r1hrqq3" path="res://fonts/Audiowide-Regular.ttf" id="2_t3fmn"]
 [ext_resource type="Script" uid="uid://cyiakuov3xijd" path="res://modules/buttoneffectsmodule.gd" id="3_hg3r0"]
+[ext_resource type="AudioStream" uid="uid://ix6rnjh1hgwe" path="res://sounds/mouseover_sound.wav" id="4_tqrlp"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_j8spw"]
 action = &"ui_accept"
@@ -90,6 +91,12 @@ text = "  Start  "
 script = ExtResource("3_hg3r0")
 metadata/_custom_type_script = "uid://cyiakuov3xijd"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/HBoxContainer/StartButton/ButtonEffectsModule" unique_id=2125219490]
+process_mode = 3
+stream = ExtResource("4_tqrlp")
+volume_db = -24.0
+bus = &"SFX"
+
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=13219660]
 layout_mode = 2
 text = "       "
@@ -104,6 +111,12 @@ text = "  Quit  "
 [node name="ButtonEffectsModule" type="Node" parent="VBoxContainer/HBoxContainer/QuitButton" unique_id=553815590]
 script = ExtResource("3_hg3r0")
 metadata/_custom_type_script = "uid://cyiakuov3xijd"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/HBoxContainer/QuitButton/ButtonEffectsModule" unique_id=1326670449]
+process_mode = 3
+stream = ExtResource("4_tqrlp")
+volume_db = -24.0
+bus = &"SFX"
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

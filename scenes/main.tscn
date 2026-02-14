@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cdbsmgsj33xdy" path="res://scenes/player.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dt1dtgnkcapol" path="res://scenes/wall.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://c5k8f6tm6ey1j" path="res://scenes/uimenu.tscn" id="5_tbgi4"]
-[ext_resource type="AudioStream" uid="uid://bh8p0i0o4l7ak" path="res://sounds/Jump 1.wav" id="6_tefeu"]
-[ext_resource type="AudioStream" uid="uid://blvhni6omx16r" path="res://sounds/Suck 1V2.wav" id="7_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://gib770c8ibkn" path="res://sounds/exit_sound.wav" id="6_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://dt0n2yb3qxu41" path="res://sounds/caught_sound.wav" id="7_tipki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(33, 81.57855)
@@ -62,13 +62,13 @@ visible = false
 
 [node name="ExitSound" type="AudioStreamPlayer" parent="." unique_id=2146547043]
 process_mode = 3
-stream = ExtResource("6_tefeu")
+stream = ExtResource("6_o6xl0")
 volume_db = -8.0
 bus = &"SFX"
 
 [node name="CaughtSound" type="AudioStreamPlayer" parent="." unique_id=1707928448]
 process_mode = 3
-stream = ExtResource("7_o6xl0")
+stream = ExtResource("7_tipki")
 volume_db = -8.0
 bus = &"SFX"
 
