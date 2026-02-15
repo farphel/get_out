@@ -24,7 +24,7 @@ the surrounding walls) before being caught by an Enemy.
   before being caught.
   - [x] When facing the NPC, it stops (think Mario and ghosts), with a short delay
         before resuming the chase. The Enemy also changes color to blue.
-  - [ ] Each iteration (after EXITing), the NPC speeds up.
+  - [x] Each iteration (after EXITing), the NPC speeds up.
 
 ## Task 004: add game UI
 - [x] Add a UI (Start, Quit, Score)

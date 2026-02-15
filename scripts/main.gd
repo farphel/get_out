@@ -4,6 +4,7 @@ extends Node2D
 @onready var exit_sound = $ExitSound
 @onready var caught_sound = $CaughtSound
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if GameManager.number_of_attempts == 0:
@@ -19,7 +20,7 @@ func _on_exit_body_entered(body):
 		#print("You escaped!")
 		exit_sound.play()
 		GameManager.escapes += 1
-		GameManager.mob_speed = GameManager.mob_speed * 1.2
+		GameManager.mob_speed = GameManager.mob_speed * (1 + GameManager.speed_up_percent)
 		restart_game()
 
 func _on_mob_player_caught():

@@ -3,6 +3,7 @@ extends Node
 var escapes: int = 0
 var number_of_attempts: int = 0
 var mob_speed: float = 150.0
+var speed_up_percent: float = 0.15
 
 func get_stats_text() -> String:
 	if number_of_attempts == 0: return "0/0 [0%%]"
