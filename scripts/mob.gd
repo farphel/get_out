@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-@export var speed: float = 225.0
 @export var acceleration: float = 2.0
 @export var deceleration: float = 10.0
 @export var stare_precision: float = 0.7 # 0.5 (loose), 0.9 (precise)
 
+var speed: float = 0.0
 var chase_color: Color = Color(1, 1,1)
 var frozen_color: Color = Color(0,2,7)
 
@@ -17,6 +17,7 @@ func _ready():
 	position.x = 200
 	position.y = 500
 	sprite.modulate = sprite.modulate.lerp(chase_color, 0.1)
+	speed = GameManager.mob_speed
 
 func _physics_process(delta):
 	

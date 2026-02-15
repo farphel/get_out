@@ -8,6 +8,7 @@ extends Node2D
 func _ready():
 	if GameManager.number_of_attempts == 0:
 		ui.show_start_screen()
+	#print("Mob speed: %2.f" % (GameManager.mob_speed))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -18,6 +19,7 @@ func _on_exit_body_entered(body):
 		#print("You escaped!")
 		exit_sound.play()
 		GameManager.escapes += 1
+		GameManager.mob_speed = GameManager.mob_speed * 1.2
 		restart_game()
 
 func _on_mob_player_caught():
