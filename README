@@ -41,3 +41,11 @@ the surrounding walls) before being caught by an Enemy.
 - [ ] When Quit button is selected, Enter should trigger press
 - [ ] Add signals via code vs through the Godot UI
 
+## Task 007: Minor replayability improvement
+- [ ] Add small delay between clicking Start and actual start
+- [ ] Randomize spawn points of mob and player
+- [ ] Randomize location of inner obstacle
+
+## Task 008: Improve graphics
+- [ ] Add my own custom graphics and sprite sheets for mob and player
+
