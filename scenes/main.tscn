@@ -64,13 +64,11 @@ visible = false
 process_mode = 3
 stream = ExtResource("6_o6xl0")
 volume_db = -8.0
-bus = &"SFX"
 
 [node name="CaughtSound" type="AudioStreamPlayer" parent="." unique_id=1707928448]
 process_mode = 3
 stream = ExtResource("7_tipki")
 volume_db = -8.0
-bus = &"SFX"
 
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
 [connection signal="player_caught" from="Mob" to="." method="_on_mob_player_caught"]
