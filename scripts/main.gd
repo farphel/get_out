@@ -3,10 +3,15 @@ extends Node2D
 @onready var ui = $CanvasLayer/Uimenu
 @onready var exit_sound = $ExitSound
 @onready var caught_sound = $CaughtSound
-
+@onready var obstacle = $Obstacle
+var screen_size
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	screen_size = get_viewport_rect().size
+	$Obstacle.position.x = randf_range(screen_size.x / 2 - 100, screen_size.x / 2 + 100)
+	$Obstacle.position.y = randf_range(screen_size.y / 2 - 100, screen_size.y / 2 + 100)
+	#print("obstacle (x,y): %s,%s" % [$Obstacle.position.x, $Obstacle.position.y])
 	if GameManager.number_of_attempts == 0:
 		ui.show_start_screen()
 	#print("Mob speed: %2.f" % (GameManager.mob_speed))

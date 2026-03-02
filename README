@@ -43,8 +43,8 @@ the surrounding walls) before being caught by an Enemy.
 
 ## Task 007: Minor replayability improvement
 - [ ] Add small delay between clicking Start and actual start
-- [ ] Randomize spawn points of mob and player
-- [ ] Randomize location of inner obstacle
+- [x] Randomize spawn points of mob and player
+- [x] Randomize location of inner obstacle
 
 ## Task 008: Improve graphics
 - [ ] Add my own custom graphics and sprite sheets for mob and player

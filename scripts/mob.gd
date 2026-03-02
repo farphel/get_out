@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var deceleration: float = 10.0
 @export var stare_precision: float = 0.7 # 0.5 (loose), 0.9 (precise)
 
+var screen_size
 var speed: float = 0.0
 var chase_color: Color = Color(1, 1,1)
 var frozen_color: Color = Color(0,2,7)
@@ -14,8 +15,10 @@ var frozen_color: Color = Color(0,2,7)
 signal player_caught
 
 func _ready():
-	position.x = 200
-	position.y = 500
+	screen_size = get_viewport_rect().size
+	position.x = randf_range(50.0, screen_size.x / 3 - 100.0)
+	position.y = randf_range(screen_size.y / 2, screen_size.y - 100.0)
+	#print("Mob start (x,y): %d, %d" % [position.x, position.y])
 	sprite.modulate = sprite.modulate.lerp(chase_color, 0.1)
 	speed = GameManager.mob_speed
 
