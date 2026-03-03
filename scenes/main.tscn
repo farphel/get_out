@@ -73,5 +73,3 @@ volume_db = -8.0
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
 [connection signal="player_caught" from="Mob" to="." method="_on_mob_player_caught"]
 [connection signal="start_pressed" from="CanvasLayer/Uimenu" to="." method="_on_uimenu_start_pressed"]
-
-[editable path="Mob"]

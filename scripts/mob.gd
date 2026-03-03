@@ -18,9 +18,9 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	position.x = randf_range(50.0, screen_size.x / 3 - 100.0)
 	position.y = randf_range(screen_size.y / 2, screen_size.y - 100.0)
-	#print("Mob start (x,y): %d, %d" % [position.x, position.y])
 	sprite.modulate = sprite.modulate.lerp(chase_color, 0.1)
 	speed = GameManager.mob_speed
+	self.set_physics_process(false)
 
 func _physics_process(delta):
 	

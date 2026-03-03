@@ -42,7 +42,7 @@ the surrounding walls) before being caught by an Enemy.
 - [ ] Add signals via code vs through the Godot UI
 
 ## Task 007: Minor replayability improvement
-- [ ] Add small delay between clicking Start and actual start
+- [x] Add small delay between clicking Start and actual start
 - [x] Randomize spawn points of mob and player
 - [x] Randomize location of inner obstacle
 
