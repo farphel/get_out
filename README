@@ -35,7 +35,6 @@ the surrounding walls) before being caught by an Enemy.
 
 ## Task 006: Improvements
 - [x] Change Player, Enemy, and Wall into distinct scenes (vs Main scene only)
-- [ ] (maybe?) Change Enemey from `CharacterBody2D` to `NavigationAgent2D` 
 - [x] Node communication via signals vs references (remove get_parent(), etc)
 - [x] Button effects (via https://www.youtube.com/watch?v=cIetsUMtyQc)
 - [ ] When Quit button is selected, Enter should trigger press
@@ -47,5 +46,5 @@ the surrounding walls) before being caught by an Enemy.
 - [x] Randomize location of inner obstacle
 
 ## Task 008: Improve graphics
-- [ ] Add my own custom graphics and sprite sheets for mob and player
+- [x] Add my own custom graphics and sprite sheets for mob and player
 

@@ -9,7 +9,7 @@ var speed: float = 0.0
 var chase_color: Color = Color(1, 1,1)
 var frozen_color: Color = Color(0,2,7)
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player: CharacterBody2D = get_tree().get_first_node_in_group("player")
 
 signal player_caught
@@ -47,6 +47,7 @@ func _physics_process(delta):
 		velocity = velocity.lerp(target_velocity, acceleration * delta)
 		sprite.modulate = sprite.modulate.lerp(chase_color, 0.1)
 	## END: Mob halts when Player faces them
+	sprite.play("move")
 
 	## BEGIN: Mob always chases Player
 	#var direction = global_position.direction_to(player.global_position)
